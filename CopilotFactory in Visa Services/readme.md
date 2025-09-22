@@ -1,4 +1,4 @@
-# Technical Use Case: AI-Powered Visa Application Orchestration Engine  
+# AI-Powered Visa Application Orchestration Engine  
 
 **Developed by CodeSizzler from CopilotFactory for a Visa Processing Consulting Company**
 
