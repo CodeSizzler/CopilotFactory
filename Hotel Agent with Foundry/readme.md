@@ -1,4 +1,4 @@
-# Seattle Hotel Agent
+# Hotel Agent
 
 A sample AI agent built with [Microsoft Agent Framework](https://learn.microsoft.com/azure/ai-services/agents/) that helps users find hotels in Seattle. This project is designed as an `azd` starter template for deploying hosted AI agents to [Azure AI Foundry](https://learn.microsoft.com/azure/ai-studio/).
 
@@ -79,7 +79,6 @@ azd ai agent monitor --name seattle-hotel-agent --version 1 -f
 azd ai agent monitor --name seattle-hotel-agent --version 1 --type system
 ```
 
-See the [blog post](https://devblogs.microsoft.com/azure-sdk/azd-ai-agent-logs-status/) for more details.
 
 ## Project structure
 
@@ -97,10 +96,4 @@ See the [blog post](https://devblogs.microsoft.com/azure-sdk/azd-ai-agent-logs-s
 | `PROJECT_ENDPOINT` | Yes | Your Azure AI Foundry project endpoint (e.g., `https://<project>.services.ai.azure.com`) |
 | `MODEL_DEPLOYMENT_NAME` | No | Model deployment name (default: `gpt-4.1-mini`) |
 
-## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
-## License
-
-This project is licensed under the MIT License. See [LICENSE.md](LICENSE.md).
