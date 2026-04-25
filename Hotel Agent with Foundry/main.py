@@ -1,5 +1,5 @@
 """
-Seattle Hotel Agent - A simple agent with a tool to find hotels in Seattle.
+Salem Hotel Agent - A simple agent with a tool to find hotels in Salem.
 Uses Microsoft Agent Framework with Azure AI Foundry.
 Ready for deployment to Foundry Hosted Agent service.
 """
@@ -29,12 +29,12 @@ if not PROJECT_ENDPOINT:
 
 # Simulated hotel data for Seattle
 SEATTLE_HOTELS = [
-    {"name": "Contoso Suites", "price_per_night": 189, "rating": 4.5, "location": "Downtown"},
-    {"name": "Fabrikam Residences", "price_per_night": 159, "rating": 4.2, "location": "Pike Place Market"},
-    {"name": "Alpine Ski House", "price_per_night": 249, "rating": 4.7, "location": "Seattle Center"},
-    {"name": "Margie's Travel Lodge", "price_per_night": 219, "rating": 4.4, "location": "Waterfront"},
-    {"name": "Northwind Inn", "price_per_night": 139, "rating": 4.0, "location": "Capitol Hill"},
-    {"name": "Relecloud Hotel", "price_per_night": 99, "rating": 3.8, "location": "University District"},
+    {"name": "Radisson Hotel Salem", "price_per_night": 189, "rating": 4.5, "location": "Salem Steel Plant"},
+    {"name": "Zibe Salem by GRT Hotels", "price_per_night": 159, "rating": 4.2, "location": "Salem 4 Roads"},
+    {"name": "Grand Estancia", "price_per_night": 249, "rating": 4.7, "location": "Salem Bangalore Highway"},
+    {"name": "CJ Palazzio", "price_per_night": 219, "rating": 4.4, "location": "Salem AVR Round Exit"},
+    {"name": "Sivaraj Inn", "price_per_night": 139, "rating": 4.0, "location": "Opp to Sona College Salem"},
+    {"name": "Hotel Cenneys Gateway", "price_per_night": 99, "rating": 3.8, "location": "Sarada College Road Salem"},
 ]
 
 
