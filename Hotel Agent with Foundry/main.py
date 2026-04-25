@@ -27,8 +27,8 @@ if not PROJECT_ENDPOINT:
     )
 
 
-# Simulated hotel data for Seattle
-SEATTLE_HOTELS = [
+# Simulated hotel data for Salem
+SALEM_HOTELS = [
     {"name": "Radisson Hotel Salem", "price_per_night": 189, "rating": 4.5, "location": "Salem Steel Plant"},
     {"name": "Zibe Salem by GRT Hotels", "price_per_night": 159, "rating": 4.2, "location": "Salem 4 Roads"},
     {"name": "Grand Estancia", "price_per_night": 249, "rating": 4.7, "location": "Salem Bangalore Highway"},
@@ -44,7 +44,7 @@ def get_available_hotels(
     max_price: Annotated[int, "Maximum price per night in USD (optional)"] = 500,
 ) -> str:
     """
-    Get available hotels in Seattle for the specified dates.
+    Get available hotels in Salem for the specified dates.
     This simulates a call to a fake hotel availability API.
     """
     try:
@@ -60,15 +60,15 @@ def get_available_hotels(
         
         # Filter hotels by price
         available_hotels = [
-            hotel for hotel in SEATTLE_HOTELS 
+            hotel for hotel in SALEM_HOTELS 
             if hotel["price_per_night"] <= max_price
         ]
         
         if not available_hotels:
-            return f"No hotels found in Seattle within your budget of ${max_price}/night."
+            return f"No hotels found in Salem within your budget of ${max_price}/night."
         
         # Build response
-        result = f"Available hotels in Seattle from {check_in_date} to {check_out_date} ({nights} nights):\n\n"
+        result = f"Available hotels in Salem from {check_in_date} to {check_out_date} ({nights} nights):\n\n"
         
         for hotel in available_hotels:
             total_cost = hotel["price_per_night"] * nights
@@ -94,22 +94,22 @@ async def main():
         ) as client,
     ):
         agent = client.create_agent(
-            name="SeattleHotelAgent",
-            instructions="""You are a helpful travel assistant specializing in finding hotels in Seattle, Washington.
+            name="SalemHotelAgent",
+            instructions="""You are a helpful travel assistant specializing in finding hotels in Salem, Washington.
 
-When a user asks about hotels in Seattle:
+When a user asks about hotels in Salem:
 1. Ask for their check-in and check-out dates if not provided
 2. Ask about their budget preferences if not mentioned
 3. Use the get_available_hotels tool to find available options
 4. Present the results in a friendly, informative way
-5. Offer to help with additional questions about the hotels or Seattle
+5. Offer to help with additional questions about the hotels or Salem
 
-Be conversational and helpful. If users ask about things outside of Seattle hotels, 
-politely let them know you specialize in Seattle hotel recommendations.""",
+Be conversational and helpful. If users ask about things outside of Salem hotels, 
+politely let them know you specialize in Salem hotel recommendations.""",
             tools=[get_available_hotels],
         )
 
-        print("Seattle Hotel Agent Server running on http://localhost:8088")
+        print("Salem Hotel Agent Server running on http://localhost:8088")
         server = from_agent_framework(agent)
         await server.run_async()
 
