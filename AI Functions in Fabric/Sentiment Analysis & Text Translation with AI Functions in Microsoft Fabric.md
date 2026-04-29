@@ -22,12 +22,7 @@
   - [6. Text Summarization](#6-text-summarization)
   - [7. Text Translation](#7-text-translation)
   - [8. Custom Response Generation](#8-custom-response-generation)
-- [Key Observations](#key-observations)
-- [Architecture Overview](#architecture-overview)
-- [Technologies Used](#technologies-used)
-- [Known Issues & Notes](#known-issues--notes)
-- [References](#references)
-- [License](#license)
+
 
 ---
 
